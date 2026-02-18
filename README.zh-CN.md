@@ -6,7 +6,10 @@
   />
 </p>
 
-<h2 align="center">AgentScope Studio: Development-Oriented Visualization Toolkit</h2>
+<h2 align="center">AgentScope Studio：面向开发的可视化工具集</h2>
+
+<p align="center">
+[English](./README.md) | 简体中文</p>
 
 <p align="center">
     <a href="https://arxiv.org/abs/2402.14034">
@@ -47,17 +50,15 @@
     </a>
 </p>
 
-[English](./README.md) | [简体中文](./README.zh-CN.md)
+AgentScope Studio 是一款面向 [AgentScope](https://github.com/agentscope-ai/agentscope) 开发者的**本地可视化工具集**，以**透明**、**简单**、**有趣**的方式支持智能体应用的开发、调试与评测。
 
-AgentScope Studio is a powerful **local visualization toolkit** designed for developers working with [AgentScope](https://github.com/agentscope-ai/agentscope). It provides a **transparent**, **simple**, and **fun** way to develop, debug, and evaluate agent-based applications.
+## 核心功能
 
-## Key Features
-
-- **Project Management**: Organize and manage your AgentScope projects with Projects and Runs
-- **Runtime Visualization**: Chatbot-style interface for real-time agent interaction
-- **Tracing**: OpenTelemetry-based trace visualization for LLM calls, token usage, and agent invocations
-- **Agent Evaluation**: Evaluation-oriented analysis from a statistical perspective
-- **Built-in Copilot (Friday)**: A development assistant, playground for rapid secondary development, and integration hub for advanced features
+- **项目管理**：通过项目（Projects）与运行（Runs）组织和管理 AgentScope 项目
+- **运行时可视化**：聊天式界面，实时展示智能体交互
+- **追踪（Tracing）**：基于 OpenTelemetry 的 LLM 调用、Token 使用与智能体调用追踪与可视化
+- **智能体评测**：从统计视角进行评测与分析
+- **内置 Copilot（Friday）**：开发助手、快速二次开发 playground 与高级能力集成入口
 
 <p align="center">
     <img
@@ -82,61 +83,61 @@ AgentScope Studio is a powerful **local visualization toolkit** designed for dev
     />
 </p>
 
-## 📢 News
+## 📢 动态
 
-- **[2025-08]** AgentScope Studio is now open-sourced! We will continue to improve it and welcome contributions from the community.
+- **[2025-08]** AgentScope Studio 已开源，我们将持续改进并欢迎社区贡献。
 
-## 💻 Installation
+## 💻 安装
 
-### Prerequisites
+### 环境要求
 
 - **Node.js >= 20.0.0**
 - **npm >= 10.0.0**
-- [Docker](https://docs.docker.com/install/#supported-platforms) (optional, for Docker deployment)
+- [Docker](https://docs.docker.com/install/#supported-platforms)（可选，用于 Docker 部署）
 
-> **💡 Tip**: If you're using [nvm](https://github.com/nvm-sh/nvm), you can run `nvm use` to automatically switch to the required Node.js version.
+> **💡 提示**：若使用 [nvm](https://github.com/nvm-sh/nvm)，可执行 `nvm use` 自动切换至所需 Node 版本。
 
 ```bash
-# How to check your version
-node --version  # Should show v20.x.x or higher
-npm --version   # Should show 10.x.x or higher
+# 查看版本
+node --version  # 应显示 v20.x.x 或更高
+npm --version   # 应显示 10.x.x 或更高
 ```
 
-### From NPM (Recommended)
+### 从 NPM 安装（推荐）
 
 ```bash
 npm install -g @agentscope/studio
 
-# Start AgentScope Studio
+# 启动 AgentScope Studio
 as_studio
 ```
 
-### From Source
+### 从源码安装
 
 ```bash
 git clone https://github.com/agentscope-ai/agentscope-studio
 cd agentscope-studio
 npm install
 
-# Start in development mode
+# 开发模式启动
 npm run dev
 ```
 
-- From npm
+或通过 npm 全局安装后启动：
 
 ```bash
-npm install -g @agentscope/studio  # or npm install @agentscope/studio
+npm install -g @agentscope/studio  # 或 npm install @agentscope/studio
 
 as_studio
 ```
 
-### Docker Deployment
+### Docker 部署
 
-Please refer to [docker/README.md](docker/README.md).
+请参阅 [docker/README.md](docker/README.md)（或 [docker/README_zh.md](docker/README_zh.md)）。
 
-## 🚀 QuickStart
+## 🚀 快速开始
 
-To connect AgentScope applications, you need to set the `studio_url` field in the `AgentScope` initializer as follows:
+在 AgentScope 应用中接入 Studio 时，需在初始化时设置 `studio_url`：
 
 ```python
 import agentscope
@@ -149,24 +150,24 @@ agentscope.init(
 # ...
 ```
 
-## 📚 Documentation
+## 📚 文档
 
-For more details, please refer to our documentation:
+更多说明请参阅：
 
-- [Overview](./docs/tutorial/en/tutorial/overview.md) - What is AgentScope Studio and how it works
-- [Quick Start](./docs/tutorial/en/tutorial/quick_start.md) - Installation and configuration guide
-- [Project Management](./docs/tutorial/en/develop/project.md) - Managing projects and runs
-- [Tracing](./docs/tutorial/en/develop/tracing.md) - OpenTelemetry integration and semantic conventions
-- [Friday](./docs/tutorial/en/agent/friday.md) - Built-in Copilot guide
-- [Contributing](./docs/tutorial/en/tutorial/contributing.md) - How to contribute
+- [概述](./docs/tutorial/zh_CN/tutorial/overview.md) - AgentScope Studio 是什么以及如何工作
+- [快速开始](./docs/tutorial/zh_CN/tutorial/quick_start.md) - 安装与配置
+- [项目管理](./docs/tutorial/zh_CN/develop/project.md) - 项目与运行管理
+- [追踪](./docs/tutorial/zh_CN/develop/tracing.md) - OpenTelemetry 集成与语义约定
+- [Friday](./docs/tutorial/zh_CN/agent/friday.md) - 内置 Copilot 说明
+- [贡献指南](./docs/tutorial/zh_CN/tutorial/contributing.md) - 如何参与贡献
 
-## ⚖️ License
+## ⚖️ 许可证
 
-AgentScope Studio is released under [Apache License 2.0](./LICENSE).
+AgentScope Studio 基于 [Apache License 2.0](./LICENSE) 发布。
 
-## ✨ Contributors
+## ✨ 贡献者
 
-All thanks to our contributors:
+感谢所有贡献者：
 
 <a href="https://github.com/agentscope-ai/agentscope-studio/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=agentscope-ai/agentscope-studio&max=999&columns=12&anon=1" />
